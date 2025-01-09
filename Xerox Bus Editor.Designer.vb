@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class EditSourceDBFWindow
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,19 +22,18 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditSourceDBFWindow))
         Me.btnOpenFile = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.lbxRawData = New System.Windows.Forms.ListBox()
         Me.txtRecordSourceID = New System.Windows.Forms.TextBox()
         Me.txtRecordName = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtRecordSubscriptionASCII = New System.Windows.Forms.TextBox()
+        Me.txtCurrentRecord = New System.Windows.Forms.TextBox()
         Me.txtRecordSubscription = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rdbSubScribeFalse = New System.Windows.Forms.RadioButton()
@@ -47,6 +46,7 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtRecordMessageASCII = New System.Windows.Forms.TextBox()
         Me.txtRecordMessage = New System.Windows.Forms.TextBox()
+        Me.txtRecordLengthAll = New System.Windows.Forms.TextBox()
         Me.txtRecordSubCatIDASCIILength = New System.Windows.Forms.TextBox()
         Me.txtRecordMessageASCIILength = New System.Windows.Forms.TextBox()
         Me.txtRecordMessageLength = New System.Windows.Forms.TextBox()
@@ -95,80 +95,58 @@ Partial Class Form1
         Me.txtRecordSourceIDLength = New System.Windows.Forms.TextBox()
         Me.txtRecordSourceIDASCII = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtIndex = New System.Windows.Forms.TextBox()
+        Me.btnDebug = New System.Windows.Forms.Button()
         Me.btnLoadRecord = New System.Windows.Forms.Button()
-        Me.txtRecordLengthAll = New System.Windows.Forms.TextBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.txtHeaderOriginal = New System.Windows.Forms.TextBox()
-        Me.txtFileName = New System.Windows.Forms.TextBox()
-        Me.txtALL = New System.Windows.Forms.TextBox()
+        Me.lbxConvertedNames = New System.Windows.Forms.ListBox()
         Me.btnUpdateRecord = New System.Windows.Forms.Button()
         Me.btnUndoUpdate = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ttpSubscription = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ttpWorkflow = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ttpIcon = New System.Windows.Forms.ToolTip(Me.components)
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.btnSubmitRecord = New System.Windows.Forms.Button()
-        Me.txtCurrentRecord = New System.Windows.Forms.TextBox()
         Me.ckbBAKCreation = New System.Windows.Forms.CheckBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ttpMessage = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnDebug = New System.Windows.Forms.Button()
         Me.btnFormUsage = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.gbxDebug = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtTotalRecords = New System.Windows.Forms.TextBox()
+        Me.txtHighlightedRecord = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.gbxDebug.SuspendLayout()
         Me.SuspendLayout()
         '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
         'btnOpenFile
         '
-        Me.btnOpenFile.Location = New System.Drawing.Point(12, 12)
+        Me.btnOpenFile.Location = New System.Drawing.Point(15, 15)
         Me.btnOpenFile.Name = "btnOpenFile"
-        Me.btnOpenFile.Size = New System.Drawing.Size(75, 23)
+        Me.btnOpenFile.Size = New System.Drawing.Size(128, 23)
         Me.btnOpenFile.TabIndex = 0
-        Me.btnOpenFile.Text = "Load File"
+        Me.btnOpenFile.Text = "Load Source.DBF File"
         Me.btnOpenFile.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(475, 32)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(167, 79)
-        Me.TextBox1.TabIndex = 2
         '
         'btnSave
         '
         Me.btnSave.Enabled = False
-        Me.btnSave.Location = New System.Drawing.Point(550, 12)
+        Me.btnSave.Location = New System.Drawing.Point(15, 44)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.Size = New System.Drawing.Size(54, 46)
         Me.btnSave.TabIndex = 4
-        Me.btnSave.Text = "Save File"
+        Me.btnSave.Text = "Save" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "File"
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'ListBox1
+        'lbxRawData
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.HorizontalScrollbar = True
-        Me.ListBox1.Location = New System.Drawing.Point(6, 32)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(463, 238)
-        Me.ListBox1.TabIndex = 5
+        Me.lbxRawData.FormattingEnabled = True
+        Me.lbxRawData.HorizontalScrollbar = True
+        Me.lbxRawData.Location = New System.Drawing.Point(6, 32)
+        Me.lbxRawData.Name = "lbxRawData"
+        Me.lbxRawData.Size = New System.Drawing.Size(463, 238)
+        Me.lbxRawData.TabIndex = 5
         '
         'txtRecordSourceID
         '
         Me.txtRecordSourceID.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSourceID.Location = New System.Drawing.Point(90, 19)
+        Me.txtRecordSourceID.Location = New System.Drawing.Point(95, 45)
         Me.txtRecordSourceID.Name = "txtRecordSourceID"
         Me.txtRecordSourceID.ReadOnly = True
         Me.txtRecordSourceID.Size = New System.Drawing.Size(400, 20)
@@ -177,7 +155,7 @@ Partial Class Form1
         'txtRecordName
         '
         Me.txtRecordName.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordName.Location = New System.Drawing.Point(90, 71)
+        Me.txtRecordName.Location = New System.Drawing.Point(95, 97)
         Me.txtRecordName.Name = "txtRecordName"
         Me.txtRecordName.ReadOnly = True
         Me.txtRecordName.Size = New System.Drawing.Size(400, 20)
@@ -185,8 +163,13 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.AutoSize = True
+        Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtRecordSubscriptionASCII)
+        Me.GroupBox1.Controls.Add(Me.txtCurrentRecord)
         Me.GroupBox1.Controls.Add(Me.txtRecordSubscription)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.btnExSubCatID)
@@ -197,6 +180,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txtRecordMessageASCII)
         Me.GroupBox1.Controls.Add(Me.txtRecordMessage)
+        Me.GroupBox1.Controls.Add(Me.txtRecordLengthAll)
         Me.GroupBox1.Controls.Add(Me.txtRecordSubCatIDASCIILength)
         Me.GroupBox1.Controls.Add(Me.txtRecordMessageASCIILength)
         Me.GroupBox1.Controls.Add(Me.txtRecordMessageLength)
@@ -247,17 +231,35 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtRecordSourceID)
         Me.GroupBox1.Controls.Add(Me.txtRecordName)
-        Me.GroupBox1.Location = New System.Drawing.Point(271, 41)
+        Me.GroupBox1.Location = New System.Drawing.Point(274, 44)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 537)
+        Me.GroupBox1.Size = New System.Drawing.Size(537, 578)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(161, 22)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(105, 13)
+        Me.Label8.TabIndex = 59
+        Me.Label8.Text = "Total Record Length"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 22)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.TabIndex = 58
+        Me.Label7.Text = "Current Record"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(276, 347)
+        Me.Label6.Location = New System.Drawing.Point(281, 373)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(71, 13)
         Me.Label6.TabIndex = 57
@@ -265,28 +267,34 @@ Partial Class Form1
         '
         'txtRecordSubscriptionASCII
         '
-        Me.txtRecordSubscriptionASCII.Location = New System.Drawing.Point(425, 331)
+        Me.txtRecordSubscriptionASCII.Location = New System.Drawing.Point(430, 357)
         Me.txtRecordSubscriptionASCII.MaxLength = 1
         Me.txtRecordSubscriptionASCII.Name = "txtRecordSubscriptionASCII"
         Me.txtRecordSubscriptionASCII.ReadOnly = True
         Me.txtRecordSubscriptionASCII.Size = New System.Drawing.Size(65, 20)
         Me.txtRecordSubscriptionASCII.TabIndex = 34
-        Me.ttpSubscription.SetToolTip(Me.txtRecordSubscriptionASCII, "0 = False" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1 = True")
+        '
+        'txtCurrentRecord
+        '
+        Me.txtCurrentRecord.Location = New System.Drawing.Point(95, 19)
+        Me.txtCurrentRecord.Name = "txtCurrentRecord"
+        Me.txtCurrentRecord.ReadOnly = True
+        Me.txtCurrentRecord.Size = New System.Drawing.Size(60, 20)
+        Me.txtCurrentRecord.TabIndex = 23
         '
         'txtRecordSubscription
         '
-        Me.txtRecordSubscription.Location = New System.Drawing.Point(353, 331)
+        Me.txtRecordSubscription.Location = New System.Drawing.Point(358, 357)
         Me.txtRecordSubscription.Name = "txtRecordSubscription"
         Me.txtRecordSubscription.ReadOnly = True
         Me.txtRecordSubscription.Size = New System.Drawing.Size(65, 20)
         Me.txtRecordSubscription.TabIndex = 33
-        Me.ttpSubscription.SetToolTip(Me.txtRecordSubscription, "0 = False" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "1 = True")
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.rdbSubScribeFalse)
         Me.GroupBox2.Controls.Add(Me.rdbSubscribeTrue)
-        Me.GroupBox2.Location = New System.Drawing.Point(353, 350)
+        Me.GroupBox2.Location = New System.Drawing.Point(358, 376)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(137, 27)
         Me.GroupBox2.TabIndex = 57
@@ -316,7 +324,7 @@ Partial Class Form1
         '
         'btnExSubCatID
         '
-        Me.btnExSubCatID.Location = New System.Drawing.Point(275, 435)
+        Me.btnExSubCatID.Location = New System.Drawing.Point(280, 461)
         Me.btnExSubCatID.Name = "btnExSubCatID"
         Me.btnExSubCatID.Size = New System.Drawing.Size(75, 46)
         Me.btnExSubCatID.TabIndex = 56
@@ -325,7 +333,7 @@ Partial Class Form1
         '
         'btnExIcon
         '
-        Me.btnExIcon.Location = New System.Drawing.Point(6, 383)
+        Me.btnExIcon.Location = New System.Drawing.Point(11, 409)
         Me.btnExIcon.Name = "btnExIcon"
         Me.btnExIcon.Size = New System.Drawing.Size(78, 46)
         Me.btnExIcon.TabIndex = 56
@@ -335,7 +343,7 @@ Partial Class Form1
         'btnExWorkflow
         '
         Me.btnExWorkflow.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExWorkflow.Location = New System.Drawing.Point(6, 331)
+        Me.btnExWorkflow.Location = New System.Drawing.Point(11, 357)
         Me.btnExWorkflow.Name = "btnExWorkflow"
         Me.btnExWorkflow.Size = New System.Drawing.Size(78, 46)
         Me.btnExWorkflow.TabIndex = 56
@@ -345,7 +353,7 @@ Partial Class Form1
         'btnExDirectory
         '
         Me.btnExDirectory.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExDirectory.Location = New System.Drawing.Point(6, 279)
+        Me.btnExDirectory.Location = New System.Drawing.Point(11, 305)
         Me.btnExDirectory.Name = "btnExDirectory"
         Me.btnExDirectory.Size = New System.Drawing.Size(78, 46)
         Me.btnExDirectory.TabIndex = 56
@@ -354,7 +362,7 @@ Partial Class Form1
         '
         'btnExName
         '
-        Me.btnExName.Location = New System.Drawing.Point(6, 71)
+        Me.btnExName.Location = New System.Drawing.Point(11, 97)
         Me.btnExName.Name = "btnExName"
         Me.btnExName.Size = New System.Drawing.Size(78, 46)
         Me.btnExName.TabIndex = 56
@@ -364,37 +372,42 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 490)
+        Me.Label12.Location = New System.Drawing.Point(11, 516)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(76, 13)
         Me.Label12.TabIndex = 53
         Me.Label12.Text = "WFMESSAGE"
-        Me.ttpMessage.SetToolTip(Me.Label12, "All *s - Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ED*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Star terminator, then space filled")
         '
         'txtRecordMessageASCII
         '
         Me.txtRecordMessageASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordMessageASCII.Location = New System.Drawing.Point(90, 513)
+        Me.txtRecordMessageASCII.Location = New System.Drawing.Point(95, 539)
         Me.txtRecordMessageASCII.MaxLength = 25
         Me.txtRecordMessageASCII.Name = "txtRecordMessageASCII"
         Me.txtRecordMessageASCII.Size = New System.Drawing.Size(400, 20)
         Me.txtRecordMessageASCII.TabIndex = 51
-        Me.ttpIcon.SetToolTip(Me.txtRecordMessageASCII, "All *s - Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ED*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Star terminator, then space filled")
         '
         'txtRecordMessage
         '
         Me.txtRecordMessage.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordMessage.Location = New System.Drawing.Point(90, 487)
+        Me.txtRecordMessage.Location = New System.Drawing.Point(95, 513)
         Me.txtRecordMessage.Name = "txtRecordMessage"
         Me.txtRecordMessage.ReadOnly = True
         Me.txtRecordMessage.Size = New System.Drawing.Size(400, 20)
         Me.txtRecordMessage.TabIndex = 50
-        Me.ttpIcon.SetToolTip(Me.txtRecordMessage, "All *s - Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ED*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Star terminator, then space filled")
+        '
+        'txtRecordLengthAll
+        '
+        Me.txtRecordLengthAll.Location = New System.Drawing.Point(272, 19)
+        Me.txtRecordLengthAll.Name = "txtRecordLengthAll"
+        Me.txtRecordLengthAll.ReadOnly = True
+        Me.txtRecordLengthAll.Size = New System.Drawing.Size(78, 20)
+        Me.txtRecordLengthAll.TabIndex = 13
         '
         'txtRecordSubCatIDASCIILength
         '
         Me.txtRecordSubCatIDASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSubCatIDASCIILength.Location = New System.Drawing.Point(496, 461)
+        Me.txtRecordSubCatIDASCIILength.Location = New System.Drawing.Point(501, 487)
         Me.txtRecordSubCatIDASCIILength.Name = "txtRecordSubCatIDASCIILength"
         Me.txtRecordSubCatIDASCIILength.ReadOnly = True
         Me.txtRecordSubCatIDASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -403,7 +416,7 @@ Partial Class Form1
         'txtRecordMessageASCIILength
         '
         Me.txtRecordMessageASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordMessageASCIILength.Location = New System.Drawing.Point(496, 513)
+        Me.txtRecordMessageASCIILength.Location = New System.Drawing.Point(501, 539)
         Me.txtRecordMessageASCIILength.Name = "txtRecordMessageASCIILength"
         Me.txtRecordMessageASCIILength.ReadOnly = True
         Me.txtRecordMessageASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -412,7 +425,7 @@ Partial Class Form1
         'txtRecordMessageLength
         '
         Me.txtRecordMessageLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordMessageLength.Location = New System.Drawing.Point(496, 487)
+        Me.txtRecordMessageLength.Location = New System.Drawing.Point(501, 513)
         Me.txtRecordMessageLength.Name = "txtRecordMessageLength"
         Me.txtRecordMessageLength.ReadOnly = True
         Me.txtRecordMessageLength.Size = New System.Drawing.Size(30, 20)
@@ -421,7 +434,7 @@ Partial Class Form1
         'txtRecordSubCatIDLength
         '
         Me.txtRecordSubCatIDLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSubCatIDLength.Location = New System.Drawing.Point(496, 435)
+        Me.txtRecordSubCatIDLength.Location = New System.Drawing.Point(501, 461)
         Me.txtRecordSubCatIDLength.Name = "txtRecordSubCatIDLength"
         Me.txtRecordSubCatIDLength.ReadOnly = True
         Me.txtRecordSubCatIDLength.Size = New System.Drawing.Size(30, 20)
@@ -429,7 +442,7 @@ Partial Class Form1
         '
         'txtRecordSubCatIDASCII
         '
-        Me.txtRecordSubCatIDASCII.Location = New System.Drawing.Point(353, 461)
+        Me.txtRecordSubCatIDASCII.Location = New System.Drawing.Point(358, 487)
         Me.txtRecordSubCatIDASCII.MaxLength = 12
         Me.txtRecordSubCatIDASCII.Name = "txtRecordSubCatIDASCII"
         Me.txtRecordSubCatIDASCII.Size = New System.Drawing.Size(137, 20)
@@ -437,14 +450,14 @@ Partial Class Form1
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(353, 461)
+        Me.TextBox4.Location = New System.Drawing.Point(358, 487)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(137, 20)
         Me.TextBox4.TabIndex = 46
         '
         'txtRecordSubCatID
         '
-        Me.txtRecordSubCatID.Location = New System.Drawing.Point(353, 435)
+        Me.txtRecordSubCatID.Location = New System.Drawing.Point(358, 461)
         Me.txtRecordSubCatID.Name = "txtRecordSubCatID"
         Me.txtRecordSubCatID.ReadOnly = True
         Me.txtRecordSubCatID.Size = New System.Drawing.Size(137, 20)
@@ -453,7 +466,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 438)
+        Me.Label10.Location = New System.Drawing.Point(11, 464)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(58, 13)
         Me.Label10.TabIndex = 45
@@ -461,7 +474,7 @@ Partial Class Form1
         '
         'txtRecordInvisibleASCII
         '
-        Me.txtRecordInvisibleASCII.Location = New System.Drawing.Point(90, 461)
+        Me.txtRecordInvisibleASCII.Location = New System.Drawing.Point(95, 487)
         Me.txtRecordInvisibleASCII.MaxLength = 1
         Me.txtRecordInvisibleASCII.Name = "txtRecordInvisibleASCII"
         Me.txtRecordInvisibleASCII.Size = New System.Drawing.Size(144, 20)
@@ -469,7 +482,7 @@ Partial Class Form1
         '
         'txtRecordInvisible
         '
-        Me.txtRecordInvisible.Location = New System.Drawing.Point(90, 435)
+        Me.txtRecordInvisible.Location = New System.Drawing.Point(95, 461)
         Me.txtRecordInvisible.Name = "txtRecordInvisible"
         Me.txtRecordInvisible.ReadOnly = True
         Me.txtRecordInvisible.Size = New System.Drawing.Size(144, 20)
@@ -478,7 +491,7 @@ Partial Class Form1
         'txtRecordWorkflowASCIILength
         '
         Me.txtRecordWorkflowASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordWorkflowASCIILength.Location = New System.Drawing.Point(240, 357)
+        Me.txtRecordWorkflowASCIILength.Location = New System.Drawing.Point(245, 383)
         Me.txtRecordWorkflowASCIILength.Name = "txtRecordWorkflowASCIILength"
         Me.txtRecordWorkflowASCIILength.ReadOnly = True
         Me.txtRecordWorkflowASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -487,7 +500,7 @@ Partial Class Form1
         'txtRecordInvisibleASCIILength
         '
         Me.txtRecordInvisibleASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordInvisibleASCIILength.Location = New System.Drawing.Point(240, 461)
+        Me.txtRecordInvisibleASCIILength.Location = New System.Drawing.Point(245, 487)
         Me.txtRecordInvisibleASCIILength.Name = "txtRecordInvisibleASCIILength"
         Me.txtRecordInvisibleASCIILength.ReadOnly = True
         Me.txtRecordInvisibleASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -496,7 +509,7 @@ Partial Class Form1
         'txtRecordInvisibleLength
         '
         Me.txtRecordInvisibleLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordInvisibleLength.Location = New System.Drawing.Point(240, 435)
+        Me.txtRecordInvisibleLength.Location = New System.Drawing.Point(245, 461)
         Me.txtRecordInvisibleLength.Name = "txtRecordInvisibleLength"
         Me.txtRecordInvisibleLength.ReadOnly = True
         Me.txtRecordInvisibleLength.Size = New System.Drawing.Size(30, 20)
@@ -505,7 +518,7 @@ Partial Class Form1
         'txtRecordWorkflowLength
         '
         Me.txtRecordWorkflowLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordWorkflowLength.Location = New System.Drawing.Point(240, 331)
+        Me.txtRecordWorkflowLength.Location = New System.Drawing.Point(245, 357)
         Me.txtRecordWorkflowLength.Name = "txtRecordWorkflowLength"
         Me.txtRecordWorkflowLength.ReadOnly = True
         Me.txtRecordWorkflowLength.Size = New System.Drawing.Size(30, 20)
@@ -514,7 +527,7 @@ Partial Class Form1
         'txtRecordSubscriptionASCIILength
         '
         Me.txtRecordSubscriptionASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSubscriptionASCIILength.Location = New System.Drawing.Point(496, 357)
+        Me.txtRecordSubscriptionASCIILength.Location = New System.Drawing.Point(501, 383)
         Me.txtRecordSubscriptionASCIILength.Name = "txtRecordSubscriptionASCIILength"
         Me.txtRecordSubscriptionASCIILength.ReadOnly = True
         Me.txtRecordSubscriptionASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -523,7 +536,7 @@ Partial Class Form1
         'txtRecordIconASCIILength
         '
         Me.txtRecordIconASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordIconASCIILength.Location = New System.Drawing.Point(496, 409)
+        Me.txtRecordIconASCIILength.Location = New System.Drawing.Point(501, 435)
         Me.txtRecordIconASCIILength.Name = "txtRecordIconASCIILength"
         Me.txtRecordIconASCIILength.ReadOnly = True
         Me.txtRecordIconASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -532,7 +545,7 @@ Partial Class Form1
         'txtRecordIconLength
         '
         Me.txtRecordIconLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordIconLength.Location = New System.Drawing.Point(496, 383)
+        Me.txtRecordIconLength.Location = New System.Drawing.Point(501, 409)
         Me.txtRecordIconLength.Name = "txtRecordIconLength"
         Me.txtRecordIconLength.ReadOnly = True
         Me.txtRecordIconLength.Size = New System.Drawing.Size(30, 20)
@@ -541,7 +554,7 @@ Partial Class Form1
         'txtRecordSubscriptionLength
         '
         Me.txtRecordSubscriptionLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSubscriptionLength.Location = New System.Drawing.Point(496, 331)
+        Me.txtRecordSubscriptionLength.Location = New System.Drawing.Point(501, 357)
         Me.txtRecordSubscriptionLength.Name = "txtRecordSubscriptionLength"
         Me.txtRecordSubscriptionLength.ReadOnly = True
         Me.txtRecordSubscriptionLength.Size = New System.Drawing.Size(30, 20)
@@ -550,7 +563,7 @@ Partial Class Form1
         'txtRecordDirectoryASCIILength
         '
         Me.txtRecordDirectoryASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDirectoryASCIILength.Location = New System.Drawing.Point(496, 305)
+        Me.txtRecordDirectoryASCIILength.Location = New System.Drawing.Point(501, 331)
         Me.txtRecordDirectoryASCIILength.Name = "txtRecordDirectoryASCIILength"
         Me.txtRecordDirectoryASCIILength.ReadOnly = True
         Me.txtRecordDirectoryASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -558,48 +571,40 @@ Partial Class Form1
         '
         'txtRecordIconASCII
         '
-        Me.txtRecordIconASCII.Location = New System.Drawing.Point(90, 409)
+        Me.txtRecordIconASCII.Location = New System.Drawing.Point(95, 435)
         Me.txtRecordIconASCII.MaxLength = 25
         Me.txtRecordIconASCII.Name = "txtRecordIconASCII"
         Me.txtRecordIconASCII.Size = New System.Drawing.Size(400, 20)
         Me.txtRecordIconASCII.TabIndex = 36
-        Me.ttpIcon.SetToolTip(Me.txtRecordIconASCII, "*** = Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS* = Customer Solutions" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA* = Eureka Tech Tip" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL* = Eureka Bull" &
-        "etin" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EDO* = EDOC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You must have a * after letters, then fill with spaces")
         '
         'txtRecordIcon
         '
-        Me.txtRecordIcon.Location = New System.Drawing.Point(90, 383)
+        Me.txtRecordIcon.Location = New System.Drawing.Point(95, 409)
         Me.txtRecordIcon.Name = "txtRecordIcon"
         Me.txtRecordIcon.ReadOnly = True
         Me.txtRecordIcon.Size = New System.Drawing.Size(400, 20)
         Me.txtRecordIcon.TabIndex = 35
-        Me.ttpIcon.SetToolTip(Me.txtRecordIcon, "*** = Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS* = Customer Solutions" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA* = Eureka Tech Tip" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL* = Eureka Bull" &
-        "etin" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EDO* = EDOC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You must have a * after letters, then fill with spaces")
         '
         'txtRecordWorkflowASCII
         '
-        Me.txtRecordWorkflowASCII.Location = New System.Drawing.Point(90, 357)
+        Me.txtRecordWorkflowASCII.Location = New System.Drawing.Point(95, 383)
         Me.txtRecordWorkflowASCII.MaxLength = 3
         Me.txtRecordWorkflowASCII.Name = "txtRecordWorkflowASCII"
         Me.txtRecordWorkflowASCII.Size = New System.Drawing.Size(144, 20)
         Me.txtRecordWorkflowASCII.TabIndex = 32
-        Me.ttpSubscription.SetToolTip(Me.txtRecordWorkflowASCII, "*** = Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS* = Customer Solutions" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA = Eureka Tech Tip" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL = Eureka Bullet" &
-        "in" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ED* = EDOC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
         '
         'txtRecordWorkflow
         '
-        Me.txtRecordWorkflow.Location = New System.Drawing.Point(90, 331)
+        Me.txtRecordWorkflow.Location = New System.Drawing.Point(95, 357)
         Me.txtRecordWorkflow.Name = "txtRecordWorkflow"
         Me.txtRecordWorkflow.ReadOnly = True
         Me.txtRecordWorkflow.Size = New System.Drawing.Size(144, 20)
         Me.txtRecordWorkflow.TabIndex = 29
-        Me.ttpSubscription.SetToolTip(Me.txtRecordWorkflow, "*** = Blank" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CS* = Customer Solutions" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EKA = Eureka Tech Tip" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "BUL = Eureka Bullet" &
-        "in" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ED* = EDOC" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
         '
         'txtRecordDirectoryASCII
         '
         Me.txtRecordDirectoryASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDirectoryASCII.Location = New System.Drawing.Point(90, 305)
+        Me.txtRecordDirectoryASCII.Location = New System.Drawing.Point(95, 331)
         Me.txtRecordDirectoryASCII.MaxLength = 128
         Me.txtRecordDirectoryASCII.Name = "txtRecordDirectoryASCII"
         Me.txtRecordDirectoryASCII.Size = New System.Drawing.Size(400, 20)
@@ -608,7 +613,7 @@ Partial Class Form1
         'txtRecordDirectory
         '
         Me.txtRecordDirectory.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDirectory.Location = New System.Drawing.Point(90, 279)
+        Me.txtRecordDirectory.Location = New System.Drawing.Point(95, 305)
         Me.txtRecordDirectory.Name = "txtRecordDirectory"
         Me.txtRecordDirectory.ReadOnly = True
         Me.txtRecordDirectory.Size = New System.Drawing.Size(400, 20)
@@ -617,7 +622,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 234)
+        Me.Label5.Location = New System.Drawing.Point(11, 260)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 13)
         Me.Label5.TabIndex = 25
@@ -626,7 +631,7 @@ Partial Class Form1
         'txtRecordModifiedASCII
         '
         Me.txtRecordModifiedASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordModifiedASCII.Location = New System.Drawing.Point(90, 253)
+        Me.txtRecordModifiedASCII.Location = New System.Drawing.Point(95, 279)
         Me.txtRecordModifiedASCII.Name = "txtRecordModifiedASCII"
         Me.txtRecordModifiedASCII.ReadOnly = True
         Me.txtRecordModifiedASCII.Size = New System.Drawing.Size(400, 20)
@@ -635,7 +640,7 @@ Partial Class Form1
         'txtRecordModified
         '
         Me.txtRecordModified.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordModified.Location = New System.Drawing.Point(90, 227)
+        Me.txtRecordModified.Location = New System.Drawing.Point(95, 253)
         Me.txtRecordModified.Name = "txtRecordModified"
         Me.txtRecordModified.ReadOnly = True
         Me.txtRecordModified.Size = New System.Drawing.Size(400, 20)
@@ -644,7 +649,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 182)
+        Me.Label4.Location = New System.Drawing.Point(11, 208)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 13)
         Me.Label4.TabIndex = 22
@@ -653,7 +658,7 @@ Partial Class Form1
         'txtRecordLastSyncASCII
         '
         Me.txtRecordLastSyncASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordLastSyncASCII.Location = New System.Drawing.Point(90, 201)
+        Me.txtRecordLastSyncASCII.Location = New System.Drawing.Point(95, 227)
         Me.txtRecordLastSyncASCII.Name = "txtRecordLastSyncASCII"
         Me.txtRecordLastSyncASCII.ReadOnly = True
         Me.txtRecordLastSyncASCII.Size = New System.Drawing.Size(400, 20)
@@ -662,7 +667,7 @@ Partial Class Form1
         'txtRecordLastSync
         '
         Me.txtRecordLastSync.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordLastSync.Location = New System.Drawing.Point(90, 175)
+        Me.txtRecordLastSync.Location = New System.Drawing.Point(95, 201)
         Me.txtRecordLastSync.Name = "txtRecordLastSync"
         Me.txtRecordLastSync.ReadOnly = True
         Me.txtRecordLastSync.Size = New System.Drawing.Size(400, 20)
@@ -671,7 +676,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 126)
+        Me.Label3.Location = New System.Drawing.Point(11, 152)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 19
@@ -680,7 +685,7 @@ Partial Class Form1
         'txtRecordDescriptionASCII
         '
         Me.txtRecordDescriptionASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDescriptionASCII.Location = New System.Drawing.Point(90, 149)
+        Me.txtRecordDescriptionASCII.Location = New System.Drawing.Point(95, 175)
         Me.txtRecordDescriptionASCII.MaxLength = 255
         Me.txtRecordDescriptionASCII.Name = "txtRecordDescriptionASCII"
         Me.txtRecordDescriptionASCII.Size = New System.Drawing.Size(400, 20)
@@ -689,7 +694,7 @@ Partial Class Form1
         'txtRecordDescription
         '
         Me.txtRecordDescription.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDescription.Location = New System.Drawing.Point(90, 123)
+        Me.txtRecordDescription.Location = New System.Drawing.Point(95, 149)
         Me.txtRecordDescription.Name = "txtRecordDescription"
         Me.txtRecordDescription.ReadOnly = True
         Me.txtRecordDescription.Size = New System.Drawing.Size(400, 20)
@@ -698,7 +703,7 @@ Partial Class Form1
         'txtRecordNameASCII
         '
         Me.txtRecordNameASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordNameASCII.Location = New System.Drawing.Point(90, 97)
+        Me.txtRecordNameASCII.Location = New System.Drawing.Point(95, 123)
         Me.txtRecordNameASCII.MaxLength = 128
         Me.txtRecordNameASCII.Name = "txtRecordNameASCII"
         Me.txtRecordNameASCII.Size = New System.Drawing.Size(400, 20)
@@ -707,7 +712,7 @@ Partial Class Form1
         'txtRecordDirectoryLength
         '
         Me.txtRecordDirectoryLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDirectoryLength.Location = New System.Drawing.Point(496, 279)
+        Me.txtRecordDirectoryLength.Location = New System.Drawing.Point(501, 305)
         Me.txtRecordDirectoryLength.Name = "txtRecordDirectoryLength"
         Me.txtRecordDirectoryLength.ReadOnly = True
         Me.txtRecordDirectoryLength.Size = New System.Drawing.Size(30, 20)
@@ -716,7 +721,7 @@ Partial Class Form1
         'txtRecordModifiedASCIILength
         '
         Me.txtRecordModifiedASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordModifiedASCIILength.Location = New System.Drawing.Point(496, 253)
+        Me.txtRecordModifiedASCIILength.Location = New System.Drawing.Point(501, 279)
         Me.txtRecordModifiedASCIILength.Name = "txtRecordModifiedASCIILength"
         Me.txtRecordModifiedASCIILength.ReadOnly = True
         Me.txtRecordModifiedASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -725,7 +730,7 @@ Partial Class Form1
         'txtRecordModifiedLength
         '
         Me.txtRecordModifiedLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordModifiedLength.Location = New System.Drawing.Point(496, 227)
+        Me.txtRecordModifiedLength.Location = New System.Drawing.Point(501, 253)
         Me.txtRecordModifiedLength.Name = "txtRecordModifiedLength"
         Me.txtRecordModifiedLength.ReadOnly = True
         Me.txtRecordModifiedLength.Size = New System.Drawing.Size(30, 20)
@@ -734,7 +739,7 @@ Partial Class Form1
         'txtRecordLastSyncASCIILength
         '
         Me.txtRecordLastSyncASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordLastSyncASCIILength.Location = New System.Drawing.Point(496, 201)
+        Me.txtRecordLastSyncASCIILength.Location = New System.Drawing.Point(501, 227)
         Me.txtRecordLastSyncASCIILength.Name = "txtRecordLastSyncASCIILength"
         Me.txtRecordLastSyncASCIILength.ReadOnly = True
         Me.txtRecordLastSyncASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -743,7 +748,7 @@ Partial Class Form1
         'txtRecordLastSyncLength
         '
         Me.txtRecordLastSyncLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordLastSyncLength.Location = New System.Drawing.Point(496, 175)
+        Me.txtRecordLastSyncLength.Location = New System.Drawing.Point(501, 201)
         Me.txtRecordLastSyncLength.Name = "txtRecordLastSyncLength"
         Me.txtRecordLastSyncLength.ReadOnly = True
         Me.txtRecordLastSyncLength.Size = New System.Drawing.Size(30, 20)
@@ -752,7 +757,7 @@ Partial Class Form1
         'txtRecordDescriptionASCIILength
         '
         Me.txtRecordDescriptionASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDescriptionASCIILength.Location = New System.Drawing.Point(496, 149)
+        Me.txtRecordDescriptionASCIILength.Location = New System.Drawing.Point(501, 175)
         Me.txtRecordDescriptionASCIILength.Name = "txtRecordDescriptionASCIILength"
         Me.txtRecordDescriptionASCIILength.ReadOnly = True
         Me.txtRecordDescriptionASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -761,7 +766,7 @@ Partial Class Form1
         'txtRecordDescriptionLength
         '
         Me.txtRecordDescriptionLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordDescriptionLength.Location = New System.Drawing.Point(496, 123)
+        Me.txtRecordDescriptionLength.Location = New System.Drawing.Point(501, 149)
         Me.txtRecordDescriptionLength.Name = "txtRecordDescriptionLength"
         Me.txtRecordDescriptionLength.ReadOnly = True
         Me.txtRecordDescriptionLength.Size = New System.Drawing.Size(30, 20)
@@ -770,7 +775,7 @@ Partial Class Form1
         'txtRecordNameASCIILength
         '
         Me.txtRecordNameASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordNameASCIILength.Location = New System.Drawing.Point(496, 97)
+        Me.txtRecordNameASCIILength.Location = New System.Drawing.Point(501, 123)
         Me.txtRecordNameASCIILength.Name = "txtRecordNameASCIILength"
         Me.txtRecordNameASCIILength.ReadOnly = True
         Me.txtRecordNameASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -779,7 +784,7 @@ Partial Class Form1
         'txtRecordNameLength
         '
         Me.txtRecordNameLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordNameLength.Location = New System.Drawing.Point(496, 71)
+        Me.txtRecordNameLength.Location = New System.Drawing.Point(501, 97)
         Me.txtRecordNameLength.Name = "txtRecordNameLength"
         Me.txtRecordNameLength.ReadOnly = True
         Me.txtRecordNameLength.Size = New System.Drawing.Size(30, 20)
@@ -788,7 +793,7 @@ Partial Class Form1
         'txtRecordSourceIDASCIILength
         '
         Me.txtRecordSourceIDASCIILength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSourceIDASCIILength.Location = New System.Drawing.Point(496, 45)
+        Me.txtRecordSourceIDASCIILength.Location = New System.Drawing.Point(501, 71)
         Me.txtRecordSourceIDASCIILength.Name = "txtRecordSourceIDASCIILength"
         Me.txtRecordSourceIDASCIILength.ReadOnly = True
         Me.txtRecordSourceIDASCIILength.Size = New System.Drawing.Size(30, 20)
@@ -797,7 +802,7 @@ Partial Class Form1
         'txtRecordSourceIDLength
         '
         Me.txtRecordSourceIDLength.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSourceIDLength.Location = New System.Drawing.Point(496, 19)
+        Me.txtRecordSourceIDLength.Location = New System.Drawing.Point(501, 45)
         Me.txtRecordSourceIDLength.Name = "txtRecordSourceIDLength"
         Me.txtRecordSourceIDLength.ReadOnly = True
         Me.txtRecordSourceIDLength.Size = New System.Drawing.Size(30, 20)
@@ -806,7 +811,7 @@ Partial Class Form1
         'txtRecordSourceIDASCII
         '
         Me.txtRecordSourceIDASCII.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtRecordSourceIDASCII.Location = New System.Drawing.Point(90, 45)
+        Me.txtRecordSourceIDASCII.Location = New System.Drawing.Point(95, 71)
         Me.txtRecordSourceIDASCII.MaxLength = 12
         Me.txtRecordSourceIDASCII.Name = "txtRecordSourceIDASCII"
         Me.txtRecordSourceIDASCII.ReadOnly = True
@@ -816,70 +821,44 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 22)
+        Me.Label1.Location = New System.Drawing.Point(11, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "SOURCEID"
         '
-        'txtIndex
+        'btnDebug
         '
-        Me.txtIndex.Location = New System.Drawing.Point(873, 283)
-        Me.txtIndex.Name = "txtIndex"
-        Me.txtIndex.Size = New System.Drawing.Size(100, 20)
-        Me.txtIndex.TabIndex = 11
+        Me.btnDebug.Location = New System.Drawing.Point(733, 15)
+        Me.btnDebug.Name = "btnDebug"
+        Me.btnDebug.Size = New System.Drawing.Size(78, 23)
+        Me.btnDebug.TabIndex = 54
+        Me.btnDebug.Text = "Debug"
+        Me.btnDebug.UseVisualStyleBackColor = True
         '
         'btnLoadRecord
         '
         Me.btnLoadRecord.Enabled = False
-        Me.btnLoadRecord.Location = New System.Drawing.Point(114, 12)
+        Me.btnLoadRecord.Location = New System.Drawing.Point(274, 15)
         Me.btnLoadRecord.Name = "btnLoadRecord"
         Me.btnLoadRecord.Size = New System.Drawing.Size(89, 23)
         Me.btnLoadRecord.TabIndex = 12
         Me.btnLoadRecord.Text = "Load Record"
         Me.btnLoadRecord.UseVisualStyleBackColor = True
         '
-        'txtRecordLengthAll
+        'lbxConvertedNames
         '
-        Me.txtRecordLengthAll.Location = New System.Drawing.Point(873, 344)
-        Me.txtRecordLengthAll.Name = "txtRecordLengthAll"
-        Me.txtRecordLengthAll.Size = New System.Drawing.Size(100, 20)
-        Me.txtRecordLengthAll.TabIndex = 13
-        '
-        'ListBox3
-        '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.HorizontalScrollbar = True
-        Me.ListBox3.Location = New System.Drawing.Point(12, 41)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(253, 537)
-        Me.ListBox3.TabIndex = 15
-        '
-        'txtHeaderOriginal
-        '
-        Me.txtHeaderOriginal.Location = New System.Drawing.Point(548, 147)
-        Me.txtHeaderOriginal.Name = "txtHeaderOriginal"
-        Me.txtHeaderOriginal.Size = New System.Drawing.Size(186, 20)
-        Me.txtHeaderOriginal.TabIndex = 17
-        '
-        'txtFileName
-        '
-        Me.txtFileName.Location = New System.Drawing.Point(912, 228)
-        Me.txtFileName.Name = "txtFileName"
-        Me.txtFileName.Size = New System.Drawing.Size(100, 20)
-        Me.txtFileName.TabIndex = 8
-        '
-        'txtALL
-        '
-        Me.txtALL.Location = New System.Drawing.Point(833, 428)
-        Me.txtALL.Name = "txtALL"
-        Me.txtALL.Size = New System.Drawing.Size(100, 20)
-        Me.txtALL.TabIndex = 9
+        Me.lbxConvertedNames.FormattingEnabled = True
+        Me.lbxConvertedNames.HorizontalScrollbar = True
+        Me.lbxConvertedNames.Location = New System.Drawing.Point(15, 96)
+        Me.lbxConvertedNames.Name = "lbxConvertedNames"
+        Me.lbxConvertedNames.Size = New System.Drawing.Size(253, 524)
+        Me.lbxConvertedNames.TabIndex = 15
         '
         'btnUpdateRecord
         '
         Me.btnUpdateRecord.Enabled = False
-        Me.btnUpdateRecord.Location = New System.Drawing.Point(209, 12)
+        Me.btnUpdateRecord.Location = New System.Drawing.Point(369, 15)
         Me.btnUpdateRecord.Name = "btnUpdateRecord"
         Me.btnUpdateRecord.Size = New System.Drawing.Size(89, 23)
         Me.btnUpdateRecord.TabIndex = 18
@@ -889,87 +868,47 @@ Partial Class Form1
         'btnUndoUpdate
         '
         Me.btnUndoUpdate.Enabled = False
-        Me.btnUndoUpdate.Location = New System.Drawing.Point(304, 12)
+        Me.btnUndoUpdate.Location = New System.Drawing.Point(464, 15)
         Me.btnUndoUpdate.Name = "btnUndoUpdate"
         Me.btnUndoUpdate.Size = New System.Drawing.Size(89, 23)
         Me.btnUndoUpdate.TabIndex = 19
         Me.btnUndoUpdate.Text = "Undo Update"
         Me.btnUndoUpdate.UseVisualStyleBackColor = True
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(809, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 20
-        '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(809, 115)
+        Me.txtDebug.Location = New System.Drawing.Point(6, 276)
         Me.txtDebug.Name = "txtDebug"
-        Me.txtDebug.Size = New System.Drawing.Size(310, 20)
+        Me.txtDebug.Size = New System.Drawing.Size(463, 20)
         Me.txtDebug.TabIndex = 21
         '
         'btnSubmitRecord
         '
         Me.btnSubmitRecord.Enabled = False
-        Me.btnSubmitRecord.Location = New System.Drawing.Point(399, 12)
+        Me.btnSubmitRecord.Location = New System.Drawing.Point(559, 15)
         Me.btnSubmitRecord.Name = "btnSubmitRecord"
         Me.btnSubmitRecord.Size = New System.Drawing.Size(89, 23)
         Me.btnSubmitRecord.TabIndex = 22
-        Me.btnSubmitRecord.Text = "Submit Record"
+        Me.btnSubmitRecord.Text = "Save Record"
         Me.btnSubmitRecord.UseVisualStyleBackColor = True
-        '
-        'txtCurrentRecord
-        '
-        Me.txtCurrentRecord.Location = New System.Drawing.Point(494, 14)
-        Me.txtCurrentRecord.Name = "txtCurrentRecord"
-        Me.txtCurrentRecord.ReadOnly = True
-        Me.txtCurrentRecord.Size = New System.Drawing.Size(50, 20)
-        Me.txtCurrentRecord.TabIndex = 23
         '
         'ckbBAKCreation
         '
         Me.ckbBAKCreation.AutoSize = True
-        Me.ckbBAKCreation.Location = New System.Drawing.Point(93, 17)
+        Me.ckbBAKCreation.Location = New System.Drawing.Point(149, 19)
         Me.ckbBAKCreation.Name = "ckbBAKCreation"
-        Me.ckbBAKCreation.Size = New System.Drawing.Size(15, 14)
+        Me.ckbBAKCreation.Size = New System.Drawing.Size(116, 17)
         Me.ckbBAKCreation.TabIndex = 24
+        Me.ckbBAKCreation.Text = "Create Backup File"
         Me.ckbBAKCreation.UseVisualStyleBackColor = True
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(892, 502)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(120, 95)
-        Me.ListBox2.TabIndex = 25
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(969, 63)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 54
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnDebug
-        '
-        Me.btnDebug.Location = New System.Drawing.Point(631, 12)
-        Me.btnDebug.Name = "btnDebug"
-        Me.btnDebug.Size = New System.Drawing.Size(75, 23)
-        Me.btnDebug.TabIndex = 54
-        Me.btnDebug.Text = "Debug"
-        Me.btnDebug.UseVisualStyleBackColor = True
         '
         'btnFormUsage
         '
-        Me.btnFormUsage.Location = New System.Drawing.Point(712, 11)
+        Me.btnFormUsage.Location = New System.Drawing.Point(712, 15)
         Me.btnFormUsage.Name = "btnFormUsage"
-        Me.btnFormUsage.Size = New System.Drawing.Size(91, 23)
+        Me.btnFormUsage.Size = New System.Drawing.Size(15, 23)
         Me.btnFormUsage.TabIndex = 55
-        Me.btnFormUsage.Text = "What is This?"
+        Me.btnFormUsage.Text = "?"
         Me.btnFormUsage.UseVisualStyleBackColor = True
         '
         'Label2
@@ -983,48 +922,81 @@ Partial Class Form1
         '
         'gbxDebug
         '
+        Me.gbxDebug.AutoSize = True
+        Me.gbxDebug.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.gbxDebug.Controls.Add(Me.Label2)
-        Me.gbxDebug.Controls.Add(Me.ListBox1)
-        Me.gbxDebug.Controls.Add(Me.TextBox1)
-        Me.gbxDebug.Controls.Add(Me.txtHeaderOriginal)
-        Me.gbxDebug.Location = New System.Drawing.Point(12, 584)
+        Me.gbxDebug.Controls.Add(Me.lbxRawData)
+        Me.gbxDebug.Controls.Add(Me.txtDebug)
+        Me.gbxDebug.Location = New System.Drawing.Point(817, 44)
         Me.gbxDebug.Name = "gbxDebug"
-        Me.gbxDebug.Size = New System.Drawing.Size(791, 286)
+        Me.gbxDebug.Size = New System.Drawing.Size(475, 315)
         Me.gbxDebug.TabIndex = 57
         Me.gbxDebug.TabStop = False
         Me.gbxDebug.Text = "DEBUG"
+        Me.gbxDebug.Visible = False
         '
-        'Form1
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(88, 47)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(74, 13)
+        Me.Label9.TabIndex = 58
+        Me.Label9.Text = "Total Records"
+        '
+        'txtTotalRecords
+        '
+        Me.txtTotalRecords.Location = New System.Drawing.Point(168, 44)
+        Me.txtTotalRecords.Name = "txtTotalRecords"
+        Me.txtTotalRecords.ReadOnly = True
+        Me.txtTotalRecords.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotalRecords.TabIndex = 59
+        '
+        'txtHighlightedRecord
+        '
+        Me.txtHighlightedRecord.Location = New System.Drawing.Point(168, 70)
+        Me.txtHighlightedRecord.Name = "txtHighlightedRecord"
+        Me.txtHighlightedRecord.ReadOnly = True
+        Me.txtHighlightedRecord.Size = New System.Drawing.Size(100, 20)
+        Me.txtHighlightedRecord.TabIndex = 60
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(75, 73)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(87, 13)
+        Me.Label11.TabIndex = 61
+        Me.Label11.Text = "Selected Record"
+        '
+        'EditSourceDBFWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(1298, 935)
+        Me.ClientSize = New System.Drawing.Size(1059, 678)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.txtHighlightedRecord)
+        Me.Controls.Add(Me.txtTotalRecords)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.btnDebug)
         Me.Controls.Add(Me.gbxDebug)
         Me.Controls.Add(Me.btnFormUsage)
-        Me.Controls.Add(Me.btnDebug)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ckbBAKCreation)
-        Me.Controls.Add(Me.txtCurrentRecord)
         Me.Controls.Add(Me.btnSubmitRecord)
-        Me.Controls.Add(Me.txtDebug)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.btnUndoUpdate)
         Me.Controls.Add(Me.btnUpdateRecord)
-        Me.Controls.Add(Me.ListBox3)
-        Me.Controls.Add(Me.txtRecordLengthAll)
+        Me.Controls.Add(Me.lbxConvertedNames)
         Me.Controls.Add(Me.btnLoadRecord)
-        Me.Controls.Add(Me.txtIndex)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.txtALL)
-        Me.Controls.Add(Me.txtFileName)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnOpenFile)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.Name = "EditSourceDBFWindow"
+        Me.Padding = New System.Windows.Forms.Padding(12)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Xerox Bus Editor"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -1036,17 +1008,12 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnOpenFile As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnSave As Button
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents lbxRawData As ListBox
     Friend WithEvents txtRecordSourceID As TextBox
     Friend WithEvents txtRecordName As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtIndex As TextBox
     Friend WithEvents btnLoadRecord As Button
     Friend WithEvents txtRecordSourceIDASCII As TextBox
     Friend WithEvents txtRecordSourceIDASCIILength As TextBox
@@ -1101,23 +1068,13 @@ Partial Class Form1
     Friend WithEvents txtRecordIconASCIILength As TextBox
     Friend WithEvents txtRecordIconLength As TextBox
     Friend WithEvents txtRecordLengthAll As TextBox
-    Friend WithEvents ListBox3 As ListBox
-    Friend WithEvents txtHeaderOriginal As TextBox
-    Friend WithEvents txtFileName As TextBox
-    Friend WithEvents txtALL As TextBox
+    Friend WithEvents lbxConvertedNames As ListBox
     Friend WithEvents btnUpdateRecord As Button
     Friend WithEvents btnUndoUpdate As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ttpSubscription As ToolTip
-    Friend WithEvents ttpWorkflow As ToolTip
-    Friend WithEvents ttpIcon As ToolTip
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents btnSubmitRecord As Button
     Friend WithEvents txtCurrentRecord As TextBox
     Friend WithEvents ckbBAKCreation As CheckBox
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ttpMessage As ToolTip
     Friend WithEvents btnDebug As Button
     Friend WithEvents btnFormUsage As Button
     Friend WithEvents Label1 As Label
@@ -1132,4 +1089,10 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents gbxDebug As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtTotalRecords As TextBox
+    Friend WithEvents txtHighlightedRecord As TextBox
+    Friend WithEvents Label11 As Label
 End Class

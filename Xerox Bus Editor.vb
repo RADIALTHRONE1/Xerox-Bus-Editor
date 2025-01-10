@@ -1020,9 +1020,9 @@ Public Class EditSourceDBFWindow
         btnSubmitRecord.Enabled = True
         btnSave.Enabled = True
 
-        txtRecordSourceIDASCII.Enabled = True
-        txtRecordLastSyncASCII.Enabled = True
-        txtRecordModifiedASCII.Enabled = True
+        txtRecordSourceIDASCII.ReadOnly = False
+        txtRecordLastSyncASCII.ReadOnly = False
+        txtRecordModifiedASCII.ReadOnly = False
 
         gbxDebug.Visible = True
     End Sub
